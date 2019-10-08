@@ -2,7 +2,7 @@
 
 ## Content
 1. [Setup](#setup)
-2. [Workflow](#workflow)
+2. [Workflow](#straight-forward-workflow)
 
 ## Setup
 
