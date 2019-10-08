@@ -186,6 +186,17 @@ git reset --soft HEAD~n
 // edit
 git commit ...
 ```
+8. Change existed branch name
+```
+git branch -m [old_branch_name] [new_branch_name]
+
+```
+9. Change commit message of lastest commit
+```
+git commit --amend
+git push -f // After edited, if the commit was pushed to remote we should run push force
+```
+
 
 9. Get a range of commits from `branch_a` to `branch_b`
 
