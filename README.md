@@ -1,12 +1,16 @@
 # Zigvy Git Workflow
 
 ## Content
-1. [Setup](#setup)
-2. [Workflow](#straight-forward-workflow)
+- [Zigvy Git Workflow](#zigvy-git-workflow)
+  - [Content](#content)
+  - [Setup](#setup)
+  - [Straight Forward Workflow](#straight-forward-workflow)
+  - [Git workflow when a task is waiting for another one](#git-workflow-when-a-task-is-waiting-for-another-one)
+  - [Other scenario](#other-scenario)
 
 ## Setup
-
 1. Fork the upstream repo with your account
+
 2. Clone the forked repo using `git clone`
 ```
 git clone https://github.com/your_username/repo_name
@@ -181,6 +185,19 @@ git commit ...
 git reset --soft HEAD~n
 // edit
 git commit ...
+```
+
+9. Get a range of commits from `branch_a` to `branch_b`
+
+```
+git checkout branch_a
+git log // checking for the commit hash
+
+git checkout branch_b
+git cherry-pick [start_6_digits_from_the_hash]...[end_6_digits_from_the_hash]
+
+// i.e: git cherry-pick 123456...999999
+// note that, start and end commit must be linear and continouse
 ```
 
 More trick at: [Oh Shit, Git!?!](https://ohshitgit.com/)
