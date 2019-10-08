@@ -186,17 +186,6 @@ git reset --soft HEAD~n
 // edit
 git commit ...
 ```
-8. Change existed branch name
-```
-git branch -m [old_branch_name] [new_branch_name]
-
-```
-9. Change commit message of lastest commit
-```
-git commit --amend
-git push -f // After edited, if the commit was pushed to remote we should run push force
-```
-
 
 9. Get a range of commits from `branch_a` to `branch_b`
 
@@ -210,5 +199,17 @@ git cherry-pick [start_6_digits_from_the_hash]...[end_6_digits_from_the_hash]
 // i.e: git cherry-pick 123456...999999
 // note that, start and end commit must be linear and continouse
 ```
+
+10. Change existed branch name
+```
+git branch -m [old_branch_name] [new_branch_name]
+
+```
+11. Change commit message of lastest commit
+```
+git commit --amend
+git push -f // After edited, if the commit was pushed to remote we should run push force
+```
+
 
 More trick at: [Oh Shit, Git!?!](https://ohshitgit.com/)
