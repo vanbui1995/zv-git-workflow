@@ -134,14 +134,14 @@ git stash show n // check the nth saved commit
 2. Completely remove the latest commit
 ```
 git commit ...
-git reset --hard HEAD^
+git reset --hard HEAD~1
 // now your latest commit is completely removed
 ```
 
 3. Revert the latest commit, which changed the commit state to uncommited. All the files you have changed will stay the same
 ```
 git commit ...
-git reset --soft HEAD^
+git reset --soft HEAD~1
 // edit
 git commit ...
 ```
@@ -155,5 +155,32 @@ git reset
 5. Understanding `HEAD`
 - HEAD is a reference to the last commit in the currently check-out branch
 - [Read More](https://stackoverflow.com/questions/2221658/whats-the-difference-between-head-and-head-in-git)
+
+6. Get a specific commit from `branch_a` to `branch_b`
+
+```
+git checkout branch_a
+git log // checking for the commit hash
+
+git checkout branch_b
+git cherry-pick [6_digits_from_the_hash]
+
+// i.e: git cherry-pick 123456
+```
+
+7. Completely remove the n-latest commit
+```
+git commit ...
+git reset --hard HEAD~n
+// now your latest commit is completely removed
+```
+
+8. Revert the n-latest commit, which changed the commit state to uncommited. All the files you have changed will stay the same
+```
+git commit ...
+git reset --soft HEAD~n
+// edit
+git commit ...
+```
 
 More trick at: [Oh Shit, Git!?!](https://ohshitgit.com/)
